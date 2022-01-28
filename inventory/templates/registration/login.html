@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'inventory/style.css' %}" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>{% block title %}Django Delights{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head> 
+<div class="app1">
+        <h2 class ="new">Please login</h2>
+    <form class="df" method="post">
+        <div>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Login"/>
+        </div>
+    </form>
+</div>
+    

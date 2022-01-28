@@ -4,22 +4,31 @@ from re import purge
 from django import forms
 from .models import Ingredient, Purchases, MenuItems, RecipeRequirement
 
-class UpdateMenuItemForm(forms.ModelForm):
+class CreateMenuItemForm(forms.ModelForm):
     class Meta:
         model = MenuItems
         fields = "__all__"
 
-class UpdateIngredientItemForm(forms.ModelForm):
+class CreateIngredientItemForm(forms.ModelForm):
     class Meta:
-        models = Ingredient
+        model = Ingredient
         fields = "__all__"
 
 class UpdateRecipeRequirementForm(forms.ModelForm):
     class Meta:
-        models = RecipeRequirement
+        model = RecipeRequirement
         fields = "__all__"
 
 class CreatePurchaseForm(forms.ModelForm):
     class Meta:
-        models = Purchases
+        model = Purchases
         fields = "__all__"
+
+
+class UpdateIngredientForm(forms.ModelForm):
+    class Meta:
+        model =Ingredient
+        fields = "__all__"
+
+
+

@@ -16,7 +16,7 @@ hr {
 }
 
 header {
-    background-color: #FFF0E5;
+    background-color: #0cbcf1;
     min-height: 200px;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@ main h2 {
     min-width: 800px;
     max-width: 60%;
     margin: 0 auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.582), 0 3px 10px 0 rgba(0, 0, 0, 0.623);
 }
 
 
@@ -104,19 +104,19 @@ header p {
 
 .navbar {
     margin-top: 50px;
-    display: flex;
+    display:inline;
     width: 100%;
 }
 
 .navbar a {
     text-decoration: none;
     padding: 8px 0;
-    color: #1557FF;
+    color: #f0f0f0;
     margin-right: 15px;
 }
 
 .navbar a:hover, .navbar .current-page {
-    border-bottom: solid 4px #1557FF;
+    border-bottom: solid 4px #ff1d15;
     border-spacing: 0 15px;
     font-weight: bold;
 }
@@ -139,7 +139,7 @@ main table {
     text-align: center;
     text-decoration: none;
     border: 0px;
-    background-color: #1557FF;
+    background-color: #5a8a0e;
     border-radius: 5px;
     color: white;
     padding: 10px;
@@ -152,7 +152,7 @@ main table {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    justify-content: space-between;
+    justify-content:space-evenly;
 }
 
 .menu-items * {
@@ -195,7 +195,7 @@ main table {
 
 a {
     text-decoration: none;
-    color: #1557FF;
+    color: #ffad15;
 }
 a:hover {
     font-weight: bold;
@@ -203,4 +203,34 @@ a:hover {
 
 main form input[type=submit] {
     width: max-content;
+}
+
+/* #in{
+color: #1557FF;
+
+} */
+
+.app1 {
+    min-width: 50px;
+    max-width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.582), 0 3px 10px 0 rgba(0, 0, 0, 0.623);
+}
+
+
+.df{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    border: 1px solid grey;
+    margin: 10px 0;
+    border-radius: 10px;
+    justify-content: left;
+    flex-basis: 45%;
+}
+
+.new{
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 30px;
 }

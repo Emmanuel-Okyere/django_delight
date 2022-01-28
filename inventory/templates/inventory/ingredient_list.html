@@ -2,9 +2,9 @@
 {% load static %} 
 {% block content %}
     <h2>Add Ingredient to Inventory</h2>
-    <form method="post">
     <div>
         <h2>Ingredients</h2>
+        <a href = "{% url 'createingredient' %}">Add Ingredients</a>
         <table class="inventory-table">
             <thead>
                 <tr>
@@ -20,11 +20,11 @@
                     <td>{{ ingredient.name }}</td>
                     <td>{{ ingredient.quantity }}</td>
                     <td>{{ ingredient.unit }}</td>
-                    <td class="price">${{ ingredient.price_per_unit|stringformat:".2f" }}</td>
+                    <td class="price">${{ ingredient.unit_price|stringformat:".2f" }}</td>
+                    <td><a href="{% url 'updateingredient' ingredient.id %}"><button>Update</button></a></td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     </div>
-    </form>
 {% endblock %}

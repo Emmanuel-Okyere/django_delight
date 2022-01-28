@@ -5,12 +5,17 @@ from django.db import models
 # Create your models here.
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
-    quantity = models.FloatField(default=0.00)
+    quantity = models.FloatField(default=1)
     unit = models.CharField(max_length= 100)
     unit_price = models.FloatField(default = 0.00)
 
     def __str__(self):
         return "Ingredient = {}, Availability = {}, Unit = {}, price per unit = {}".format(self.name, self.quantity, self.unit, self.unit_price)
+    
+
+    def get_absolute_url(self):
+        return "list"
+
 
 class MenuItems(models.Model):
     title = models.CharField(max_length= 100)
@@ -18,6 +23,9 @@ class MenuItems(models.Model):
 
     def __str__(self):
         return f"Item = {self.title}, Item Price = {self.price}"
+    
+    def get_absolute_url(self):
+        return "list"
 
 class RecipeRequirement(models.Model):
     menu_item = models.ForeignKey(MenuItems, on_delete = models.CASCADE)
@@ -32,4 +40,7 @@ class Purchases(models.Model):
 
     def __str__(self):
         return f"Menu item = [{self.menu_item.__str__()}], Time Stamp = {self.timestamp}"
+    
 
+    def get_absolute_url(self):
+        return "list"
